@@ -1,7 +1,19 @@
 :root {
+  --color-cream: #e3dfba;
+  --color-sage: #c8d6bf;
+  --color-aqua-light: #93ccc6;
+  --color-aqua: #6cbdb5;
+  --color-dark: #1a1f1e;
+  --color-white: #ffffff;
+  --color-off-white: #f8faf9;
+  --color-border: #dde5df;
+  --color-text-soft: #5b6764;
+  --shadow-soft: 0 8px 24px rgba(26, 31, 30, 0.08);
+  --shadow-medium: 0 12px 28px rgba(26, 31, 30, 0.12);
+
   font-family: Inter, Arial, sans-serif;
-  color: #0f172a;
-  background: #f1f5f9;
+  color: var(--color-dark);
+  background: var(--color-white);
   line-height: 1.5;
   font-weight: 400;
 }
@@ -18,8 +30,8 @@ body,
 }
 
 body {
-  background: #f1f5f9;
-  color: #0f172a;
+  background: var(--color-white);
+  color: var(--color-dark);
 }
 
 button,
@@ -35,6 +47,7 @@ button {
 .app-shell {
   min-height: 100vh;
   padding-bottom: 92px;
+  background: var(--color-white);
 }
 
 .topbar {
@@ -46,9 +59,9 @@ button {
   justify-content: space-between;
   gap: 16px;
   padding: 18px 20px;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .brand {
@@ -58,14 +71,15 @@ button {
 }
 
 .brand__avatar {
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border-radius: 999px;
   display: grid;
   place-items: center;
-  background: #ffe4e6;
-  color: #e11d48;
-  font-weight: 700;
+  background: var(--color-cream);
+  color: var(--color-dark);
+  font-size: 1.4rem;
+  box-shadow: var(--shadow-soft);
 }
 
 .brand__eyebrow {
@@ -73,7 +87,7 @@ button {
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  color: #64748b;
+  color: var(--color-text-soft);
 }
 
 .brand h1 {
@@ -91,8 +105,8 @@ button {
   display: none;
   padding: 8px 12px;
   border-radius: 999px;
-  background: #f1f5f9;
-  color: #334155;
+  background: var(--color-sage);
+  color: var(--color-dark);
   font-size: 0.9rem;
   font-weight: 600;
 }
@@ -101,8 +115,9 @@ button {
   width: 40px;
   height: 40px;
   border-radius: 999px;
-  background: white;
-  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+  background: var(--color-white);
+  box-shadow: var(--shadow-soft);
+  color: var(--color-dark);
 }
 
 .main-content {
@@ -119,16 +134,16 @@ button {
   width: 100%;
   height: 48px;
   border-radius: 18px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--color-border);
   padding: 0 16px;
-  background: white;
+  background: var(--color-white);
   outline: none;
-  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.05);
+  box-shadow: 0 2px 10px rgba(26, 31, 30, 0.05);
 }
 
 .search-input:focus {
-  border-color: #fb7185;
-  box-shadow: 0 0 0 3px rgba(251, 113, 133, 0.16);
+  border-color: var(--color-aqua);
+  box-shadow: 0 0 0 3px rgba(108, 189, 181, 0.18);
 }
 
 .search-row__actions {
@@ -158,14 +173,14 @@ button {
 }
 
 .primary-button {
-  background: #f43f5e;
-  color: white;
+  background: var(--color-aqua);
+  color: var(--color-dark);
 }
 
 .secondary-button {
-  background: white;
-  color: #0f172a;
-  border: 1px solid #e2e8f0;
+  background: var(--color-white);
+  color: var(--color-dark);
+  border: 1px solid var(--color-sage);
 }
 
 .map-section {
@@ -178,18 +193,18 @@ button {
   min-height: 620px;
   border-radius: 32px;
   background:
-    radial-gradient(circle at 20% 18%, rgba(134, 239, 172, 0.55), transparent 18%),
-    radial-gradient(circle at 82% 24%, rgba(134, 239, 172, 0.45), transparent 16%),
-    radial-gradient(circle at 12% 74%, rgba(187, 247, 208, 0.65), transparent 18%),
-    linear-gradient(180deg, #e2f3df 0%, #eef5e9 18%, #f2f4ef 48%, #edf3eb 100%);
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+    radial-gradient(circle at 20% 18%, rgba(147, 204, 198, 0.35), transparent 18%),
+    radial-gradient(circle at 82% 24%, rgba(108, 189, 181, 0.28), transparent 16%),
+    radial-gradient(circle at 12% 74%, rgba(200, 214, 191, 0.45), transparent 18%),
+    linear-gradient(180deg, #f7f8f2 0%, #fbfcfa 20%, #ffffff 50%, #f8faf9 100%);
+  border: 1px solid rgba(200, 214, 191, 0.75);
+  box-shadow: var(--shadow-medium);
 }
 
 .map-overlay {
   position: absolute;
-  opacity: 0.55;
-  background: #94a3b8;
+  opacity: 0.45;
+  background: #8ca19b;
 }
 
 .map-overlay--road {
@@ -277,15 +292,17 @@ button {
 .chip {
   padding: 10px 14px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.92);
-  color: #334155;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--color-dark);
   font-weight: 600;
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--color-sage);
 }
 
 .chip--active {
-  background: #fb7185;
-  color: white;
+  background: var(--color-aqua);
+  color: var(--color-dark);
+  border-color: var(--color-aqua);
 }
 
 .traveler-pill {
@@ -295,10 +312,11 @@ button {
   z-index: 10;
   padding: 12px 16px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.96);
-  color: #334155;
+  background: rgba(255, 255, 255, 0.97);
+  color: var(--color-dark);
   font-weight: 700;
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--color-sage);
 }
 
 .map-pin-button {
@@ -309,9 +327,10 @@ button {
   width: 48px;
   height: 48px;
   border-radius: 999px;
-  background: white;
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.1);
+  background: var(--color-white);
+  box-shadow: var(--shadow-soft);
   font-size: 1.1rem;
+  color: var(--color-dark);
 }
 
 .hotspot {
@@ -325,7 +344,7 @@ button {
   position: absolute;
   inset: -8px;
   border-radius: 999px;
-  background: rgba(244, 63, 94, 0.24);
+  background: rgba(108, 189, 181, 0.3);
   filter: blur(8px);
   animation: pulseGlow 2s infinite ease-in-out;
 }
@@ -339,17 +358,18 @@ button {
   justify-content: center;
   padding: 10px 14px;
   border-radius: 999px;
-  background: white;
-  color: #e11d48;
+  background: var(--color-white);
+  color: var(--color-dark);
   font-weight: 700;
-  box-shadow: 0 12px 22px rgba(15, 23, 42, 0.14);
+  box-shadow: 0 12px 22px rgba(26, 31, 30, 0.14);
+  border: 1px solid var(--color-sage);
 }
 
 .hotspot__dot {
   width: 10px;
   height: 10px;
   border-radius: 999px;
-  background: #f43f5e;
+  background: var(--color-aqua);
 }
 
 .list-floating-button {
@@ -360,10 +380,11 @@ button {
   z-index: 20;
   padding: 12px 18px;
   border-radius: 999px;
-  background: white;
-  color: #334155;
+  background: var(--color-white);
+  color: var(--color-dark);
   font-weight: 700;
-  box-shadow: 0 12px 22px rgba(15, 23, 42, 0.12);
+  box-shadow: var(--shadow-medium);
+  border: 1px solid var(--color-sage);
 }
 
 .add-floating-button {
@@ -374,11 +395,11 @@ button {
   width: 56px;
   height: 56px;
   border-radius: 999px;
-  background: #f43f5e;
-  color: white;
+  background: var(--color-dark);
+  color: var(--color-cream);
   font-size: 2rem;
   line-height: 1;
-  box-shadow: 0 16px 26px rgba(244, 63, 94, 0.32);
+  box-shadow: 0 16px 26px rgba(26, 31, 30, 0.22);
 }
 
 .zone-panel {
@@ -389,9 +410,10 @@ button {
   z-index: 12;
   padding: 16px;
   border-radius: 28px;
-  background: rgba(255, 255, 255, 0.96);
-  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.12);
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: var(--shadow-medium);
   backdrop-filter: blur(8px);
+  border: 1px solid var(--color-sage);
 }
 
 .zone-panel__header {
@@ -410,7 +432,7 @@ button {
 .zone-panel__header p {
   margin: 4px 0 0;
   font-size: 0.85rem;
-  color: #64748b;
+  color: var(--color-text-soft);
 }
 
 .zone-grid {
@@ -421,7 +443,8 @@ button {
 .zone-card {
   padding: 14px;
   border-radius: 18px;
-  background: #f8fafc;
+  background: var(--color-off-white);
+  border: 1px solid var(--color-border);
 }
 
 .zone-card__top {
@@ -433,7 +456,7 @@ button {
 
 .zone-card p {
   margin: 0;
-  color: #64748b;
+  color: var(--color-text-soft);
   font-size: 0.9rem;
 }
 
@@ -446,19 +469,21 @@ button {
 .stat-card {
   padding: 16px;
   border-radius: 24px;
-  background: white;
-  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+  background: var(--color-white);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--color-border);
 }
 
 .stat-card__title {
   display: block;
-  color: #64748b;
+  color: var(--color-text-soft);
   font-size: 0.9rem;
   margin-bottom: 6px;
 }
 
 .stat-card__value {
   font-size: 1.7rem;
+  color: var(--color-dark);
 }
 
 .content-section {
@@ -476,7 +501,7 @@ button {
 
 .section-title p {
   margin: 0;
-  color: #64748b;
+  color: var(--color-text-soft);
 }
 
 .cards-grid {
@@ -487,8 +512,9 @@ button {
 .content-card {
   padding: 18px;
   border-radius: 24px;
-  background: white;
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+  background: var(--color-white);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--color-border);
 }
 
 .content-card__top {
@@ -506,7 +532,7 @@ button {
 
 .muted {
   margin: 0 0 6px;
-  color: #64748b;
+  color: var(--color-text-soft);
 }
 
 .badge {
@@ -516,19 +542,19 @@ button {
   min-height: 28px;
   padding: 4px 10px;
   border-radius: 999px;
-  background: #f43f5e;
-  color: white;
+  background: var(--color-aqua);
+  color: var(--color-dark);
   font-size: 0.8rem;
   font-weight: 700;
 }
 
 .badge--soft {
-  background: #ffe4e6;
-  color: #be123c;
+  background: var(--color-cream);
+  color: var(--color-dark);
 }
 
 .price {
-  color: #334155;
+  color: var(--color-dark);
   font-weight: 700;
   font-size: 0.9rem;
 }
@@ -543,9 +569,9 @@ button {
   grid-template-columns: repeat(5, 1fr);
   gap: 6px;
   padding: 10px 10px 14px;
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(12px);
-  border-top: 1px solid rgba(226, 232, 240, 0.9);
+  border-top: 1px solid var(--color-border);
 }
 
 .bottom-nav__item {
@@ -556,7 +582,7 @@ button {
   padding: 10px 6px;
   border-radius: 18px;
   background: transparent;
-  color: #64748b;
+  color: var(--color-text-soft);
 }
 
 .bottom-nav__item span {
@@ -568,8 +594,8 @@ button {
 }
 
 .bottom-nav__item--active {
-  background: #0f172a;
-  color: white;
+  background: var(--color-dark);
+  color: var(--color-cream);
 }
 
 @keyframes pulseGlow {

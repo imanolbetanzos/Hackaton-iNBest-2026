@@ -166,7 +166,9 @@ function App() {
     <div className="app-shell">
       <header className="topbar">
         <div className="brand">
-          <div className="brand__avatar">RT</div>
+          <div className="brand__avatar" aria-label="Sombrero">
+            🤠
+          </div>
           <div>
             <span className="brand__eyebrow">Mundial 2026</span>
             <h1>Ruta Tapatía</h1>
@@ -175,8 +177,8 @@ function App() {
 
         <div className="topbar__actions">
           <span className="location-pill">Jalisco</span>
-          <button className="icon-button">🔔</button>
-          <button className="icon-button">👤</button>
+          <button className="icon-button" aria-label="Notificaciones">🔔</button>
+          <button className="icon-button" aria-label="Perfil">👤</button>
         </div>
       </header>
 
@@ -213,7 +215,7 @@ function App() {
             </div>
 
             <div className="traveler-pill">100+ viajeros activos</div>
-            <button className="map-pin-button">📍</button>
+            <button className="map-pin-button" aria-label="Ubicación">📍</button>
 
             {heatZones.map((zone) => (
               <button
@@ -231,7 +233,7 @@ function App() {
             ))}
 
             <button className="list-floating-button">☰ Lista</button>
-            <button className="add-floating-button">+</button>
+            <button className="add-floating-button" aria-label="Agregar">+</button>
 
             <div className="zone-panel">
               <div className="zone-panel__header">

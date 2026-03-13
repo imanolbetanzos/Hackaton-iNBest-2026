@@ -35,13 +35,18 @@ body {
 }
 
 button,
-input {
+input,
+a {
   font: inherit;
 }
 
 button {
   cursor: pointer;
   border: none;
+}
+
+a {
+  color: inherit;
 }
 
 .app-shell {
@@ -143,6 +148,7 @@ button {
 .bottom-nav__item:hover,
 .list-floating-button:hover,
 .add-floating-button:hover,
+.ball-floating-button:hover,
 .map-hotspot:hover {
   transform: translateY(-1px);
 }
@@ -220,7 +226,7 @@ button {
 .map-pin-button {
   position: absolute;
   right: 18px;
-  bottom: 175px;
+  bottom: 210px;
   z-index: 20;
   width: 48px;
   height: 48px;
@@ -229,6 +235,9 @@ button {
   box-shadow: var(--shadow-soft);
   font-size: 1.1rem;
   color: var(--color-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .list-floating-button {
@@ -249,16 +258,38 @@ button {
 .add-floating-button {
   position: absolute;
   right: 18px;
-  bottom: 235px;
+  bottom: 280px;
   z-index: 21;
   width: 56px;
   height: 56px;
   border-radius: 999px;
   background: var(--color-dark);
   color: var(--color-cream);
-  font-size: 2rem;
+  font-size: 1.55rem;
   line-height: 1;
   box-shadow: 0 16px 26px rgba(26, 31, 30, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.ball-floating-button {
+  position: absolute;
+  right: 18px;
+  bottom: 350px;
+  z-index: 22;
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  background: var(--color-dark);
+  color: var(--color-cream);
+  font-size: 1.5rem;
+  line-height: 1;
+  box-shadow: 0 16px 26px rgba(26, 31, 30, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .zone-panel {

@@ -75,8 +75,12 @@ function RealMap() {
 
         <div ref={mapContainer} className="real-map-container" />
 
+        <button className="add-floating-button" aria-label="Próximos Partidos">
+        ⚽
+        </button>
+
         <button className="add-floating-button" aria-label="Movilidad">
-          🚶
+        🚶
         </button>
 
         <div className="zone-panel">

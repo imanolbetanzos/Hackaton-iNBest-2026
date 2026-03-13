@@ -168,7 +168,7 @@ function App() {
           </div>
           <div>
             <span className="brand__eyebrow">MUNDIAL 2026</span>
-            <h1>Ruta Tapatía</h1>
+            <h1>TapaTrip</h1>
           </div>
         </div>
 

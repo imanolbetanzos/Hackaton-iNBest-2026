@@ -26,7 +26,7 @@ TapaTrip resuelve ese problema al centralizar en una sola interfaz:
 
 ## Propuesta de valor
 
-Ruta Tapatía convierte el fan journey fuera del estadio en una experiencia más simple, visual y conectada.
+TapaTrip convierte el fan journey fuera del estadio en una experiencia más simple, visual y conectada.
 
 La plataforma permite que el usuario:
 

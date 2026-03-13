@@ -1,16 +1,83 @@
-# React + Vite
+# TapaTrip
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+TapaTrip es un prototipo web desarrollado para un hackathon enfocado en el Mundial FIFA 2026, con Guadalajara, Jalisco, como una de las sedes principales. La solución busca mejorar la experiencia del aficionado fuera del estadio a través de una plataforma digital centrada en movilidad, experiencias culturales y convivencia social.
 
-Currently, two official plugins are available:
+## Descripción del proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Durante el Mundial 2026, miles de aficionados nacionales e internacionales llegarán a Guadalajara enfrentándose a varios retos: cómo trasladarse, qué actividades realizar en la ciudad y dónde convivir con otros fans antes o después de un partido.
 
-## React Compiler
+TapaTrip propone una solución digital que reúne en un solo lugar:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Ride Sharing
+- Cultural Experience
+- Partying / Social Events
 
-## Expanding the ESLint configuration
+La aplicación muestra un mapa interactivo del área de Jalisco y Guadalajara, donde el usuario puede identificar zonas con alta concurrencia de actividades mediante hotspots o burbujas visuales. Esto permite descubrir rápidamente dónde hay más movimiento, eventos o trayectos disponibles.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Problema que resuelve
+
+Actualmente, la experiencia del visitante está fragmentada entre múltiples plataformas: transporte, mapas, recomendaciones, eventos y redes sociales. Esto genera fricción, desinformación y una experiencia poco integrada.
+
+TapaTrip resuelve ese problema al centralizar en una sola interfaz:
+
+- movilidad compartida hacia zonas clave
+- descubrimiento de actividades culturales
+- acceso a espacios de convivencia y celebración
+
+## Propuesta de valor
+
+Ruta Tapatía convierte el fan journey fuera del estadio en una experiencia más simple, visual y conectada.
+
+La plataforma permite que el usuario:
+
+- encuentre zonas activas en tiempo real
+- identifique rides cercanos
+- descubra experiencias locales auténticas
+- acceda a eventos sociales para convivir con otros aficionados
+
+## Funcionalidades principales del prototipo
+
+- mapa interactivo centrado en Guadalajara y Jalisco
+- hotspots para mostrar zonas con mayor actividad
+- filtros visuales por tipo de experiencia
+- tarjetas de Ride Sharing
+- tarjetas de Cultural Experience
+- tarjetas de Partying
+- navegación inferior centrada
+- botón de acceso externo a Sectur Jalisco
+- diseño responsive para visualización web y móvil
+
+## Arquitectura tecnológica
+
+El proyecto está pensado para ejecutarse sobre AWS con una arquitectura moderna, escalable y orientada a servicios.
+
+### Frontend
+- React
+- Vite
+- CSS personalizado
+
+### Mapa
+- Amazon Location Service
+- MapLibre GL JS
+
+### Hosting
+- AWS Amplify
+
+### Servicios AWS considerados para evolución del MVP
+- Amazon Cognito para autenticación
+- AWS AppSync para APIs
+- DynamoDB para almacenamiento de eventos, rides y usuarios
+- Amazon S3 para imágenes o contenido multimedia
+
+## Estructura del proyecto
+
+```bash
+src/
+  components/
+    RealMap.jsx
+  App.jsx
+  index.css
+public/
+README.md
+package.json
+amplify.yml
